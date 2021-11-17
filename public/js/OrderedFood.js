@@ -1,5 +1,7 @@
+const ProdURL = 'http://user-handi-app.herokuapp.com';
 const DevUrl = 'http://localhost:3000';
 const URLGet =  DevUrl+'/SearchedByPhoneNo';
+const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
 const unOrderList =  document.querySelector('#ListMainDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
@@ -14,7 +16,7 @@ const SearchedPhoneCall = (mobNo)=>{
    const phoneData = {mob:parseInt(mobNo)}
     $.ajax({
         type: "GET",
-        url: URLGet,
+        url: ProdURLGet,
         data: phoneData,
         cache: false,
         success: function(data){

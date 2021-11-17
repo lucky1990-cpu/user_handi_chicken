@@ -63,18 +63,27 @@ $.ajax({
  
  })
 
- const userValidation = ()=>{
+ const userValidation = (updatedFood)=>{
   if(document.querySelector('#UserName').value==''){
     document.querySelector('#UserName').style.border='1px solid red'
     return;
+  }
+  else{
+    document.querySelector('#UserName').style.border='1px solid black'
   }
   if(document.querySelector('#MobNo').value==''){
     document.querySelector('#MobNo').style.border='1px solid red'
     return
   }
+  else{
+    document.querySelector('#MobNo').style.border='1px solid black'
+  }
    if(document.querySelector('#homeAddress').value==''){
     document.querySelector('#homeAddress').style.border='1px solid red'
     return
+   }
+   else{
+    document.querySelector('#homeAddress').style.border='1px solid black'
    }
    UpdateFoodItem(updatedFood)
  }
