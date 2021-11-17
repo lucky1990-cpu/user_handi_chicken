@@ -13,9 +13,14 @@ const myData = {
 
 $.ajax({
     type: "GET",
-    url: URLGet,
+    url: ProdURLGet,
     data: myData,
     cache: false,
+    async: true,
+    crossDomain: true,
+    headers: {  'Access-Control-Allow-Origin': '*',
+    'accept': 'application/json'
+    },
     success: function(data){
       document.querySelector('.loader').style.visibility='hidden';
        EditFormBinding(data)
