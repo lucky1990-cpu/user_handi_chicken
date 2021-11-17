@@ -5,7 +5,7 @@ const DevUrl = 'http://localhost:3000';
 const ProdUrl = 'http://handi-chichen.herokuapp.com';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const URLFoodOrder = DevUrl+'/FoodOrder';
-const URLProdFoodOrder = ProdUserURL +'FoodOrder';
+const URLProdFoodOrder = ProdUserURL +'/FoodOrder';
 const ProdURLGet = ProdUrl+'/EditFoodItemFetchData';
 const URLEditFood = ProdUrl +'/UpdateFoodItem';
 const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
@@ -58,9 +58,9 @@ $.ajax({
     PhoneNo:document.querySelector('#MobNo').value,
     Address:document.querySelector('#homeAddress').value
 }
-  userValidation()
+  userValidation(updatedFood)
    
- UpdateFoodItem(updatedFood)
+ 
  })
 
  const userValidation = ()=>{
@@ -76,6 +76,7 @@ $.ajax({
     document.querySelector('#homeAddress').style.border='1px solid red'
     return
    }
+   UpdateFoodItem(updatedFood)
  }
 
 
