@@ -45,7 +45,7 @@ route.get('/EditFoodItemFetchData',async(req,res)=>{
 route.get('/SearchedByPhoneNo',async(req,res)=>{
     console.log(req.query)
     try{
-        const ordereFood = await UserOrderDetails.find({PhoneNo:9990716623})
+        const ordereFood = await UserOrderDetails.find({PhoneNo:req.query.mob})
         res.json(ordereFood)
     }
    catch(e){
