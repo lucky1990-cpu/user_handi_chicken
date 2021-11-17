@@ -5,6 +5,11 @@ const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
 const orderDetailsDiv =  document.querySelector('#orderDetailsDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
+document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
+  e.preventDefault();
+  window.location.href='/AllFoodItems' 
+})
+
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
   e.preventDefault();
   const mobNo = document.querySelector('#PhoneNumber').value;
@@ -88,18 +93,5 @@ const FoodListBinding = (data)=>{
 
     
   });
-
- 
- 
-
- document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
-  e.preventDefault();
-  window.location.href='/AllFoodItems' 
-})
-
-
-
-
-
 
 }
