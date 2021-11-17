@@ -32,7 +32,7 @@ const FoodListBinding = (data)=>{
   orderDetailsDiv.innerText='';
   data.forEach(element => {
     const unOrderList = document.createElement('ul')
-    unOrderList.className='list-group list-group-numbered';
+    unOrderList.style='list-style-type:none';
     orderDetailsDiv.appendChild(unOrderList)
     const list = document.createElement('li');
     list.className='list-group-item d-flex justify-content-between align-items-start';
