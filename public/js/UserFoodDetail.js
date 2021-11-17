@@ -1,9 +1,11 @@
 const _id = localStorage.getItem("ID");
 console.log(_id)
+const ProdUserURL = 'http://user-handi-app.herokuapp.com';
 const DevUrl = 'http://localhost:3000';
 const ProdUrl = 'http://handi-chichen.herokuapp.com';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const URLFoodOrder = DevUrl+'/FoodOrder';
+const URLProdFoodOrder = ProdUserURL +'FoodOrder';
 const ProdURLGet = ProdUrl+'/EditFoodItemFetchData';
 const URLEditFood = ProdUrl +'/UpdateFoodItem';
 const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
@@ -56,8 +58,25 @@ $.ajax({
     PhoneNo:document.querySelector('#MobNo').value,
     Address:document.querySelector('#homeAddress').value
 }
+  userValidation()
+   
  UpdateFoodItem(updatedFood)
  })
+
+ const userValidation = ()=>{
+  if(document.querySelector('#UserName').value==''){
+    document.querySelector('#UserName').style.border='1px solid red'
+    return;
+  }
+  if(document.querySelector('#MobNo').value==''){
+    document.querySelector('#MobNo').style.border='1px solid red'
+    return
+  }
+   if(document.querySelector('#homeAddress').value==''){
+    document.querySelector('#homeAddress').style.border='1px solid red'
+    return
+   }
+ }
 
 
  function DeleteRecord(deleteId){
@@ -82,7 +101,7 @@ $.ajax({
    const EditData = JSON.stringify(updatedFood)
   $.ajax({
     type: "POST",
-    url: URLFoodOrder,
+    url: URLProdFoodOrder,
     dataType: "json",
    contentType: "application/json; charset=utf-8",
    data: EditData,
