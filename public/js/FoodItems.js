@@ -5,9 +5,13 @@ $(document).ready(function(){
     $.ajax({
         type: "GET",
         url: ProdUrl,
+        async: true,
         crossDomain: true,
-        accept: "application/json",
-        headers: {  'Access-Control-Allow-Origin': '*' },
+        headers: {  'Access-Control-Allow-Origin': '*',
+        'accept': 'application/json',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+        'Access-Control-Allow-Headers': 'x-requested-with'
+     },
         success: function(data){
         //   document.querySelector('.loader').style.visibility='hidden';
         //   FoodListBinding(data);
