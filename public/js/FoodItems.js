@@ -7,11 +7,13 @@ $(document).ready(function(){
         url: ProdUrl,
         async: true,
         crossDomain: true,
-        headers: {  'Access-Control-Allow-Origin': '*',
+        headers: {  'Access-Control-Allow-Origin': req.headers.origin ||'*',
         'accept': 'application/json',
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
-        'Access-Control-Allow-Headers': 'x-requested-with'
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS,HEAD,PUT',
+        'Access-Control-Allow-Headers': 'content-Type,x-requested-with'
      },
+
+  
         success: function(data){
         //   document.querySelector('.loader').style.visibility='hidden';
         //   FoodListBinding(data);
