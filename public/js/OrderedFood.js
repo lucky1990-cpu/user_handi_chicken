@@ -29,7 +29,7 @@ const SearchedPhoneCall = (mobNo)=>{
 }
 
 const FoodListBinding = (data)=>{
-  
+  unOrderList.remove(unOrderList.childElementCount)
   data.forEach(element => {
 
     const list = document.createElement('li');
