@@ -7,7 +7,7 @@ $(document).ready(function(){
         url: ProdUrl,
         crossDomain: true,
         accept: "application/json",
-        headers: {  'Access-Control-Allow-Origin': 'http://handi-chichen.herokuapp.com' },
+        headers: {  'Access-Control-Allow-Origin': '*' },
         success: function(data){
         //   document.querySelector('.loader').style.visibility='hidden';
         //   FoodListBinding(data);
