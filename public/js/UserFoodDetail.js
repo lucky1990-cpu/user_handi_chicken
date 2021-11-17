@@ -118,7 +118,8 @@ $.ajax({
     success: function(data){
       document.querySelector('.orderAlert').style.visibility='visible';
       document.querySelector('#UpdateFood').style.visibility='hidden';
-      document.querySelector('#conMessage').innerText=data.data;
+      document.querySelector('#conMessage').innerText=data.message;
+      document.querySelector('#confName').innerText=data.userName;
     },
     error:function(e){
       console.log(e)
