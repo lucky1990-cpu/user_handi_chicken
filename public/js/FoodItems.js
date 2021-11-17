@@ -7,7 +7,7 @@ $(document).ready(function(){
         url: ProdUrl,
         async: true,
         crossDomain: true,
-        headers: {  'Access-Control-Allow-Origin': req.headers.origin ||'*',
+        headers: {  'Access-Control-Allow-Origin': '*',
         'accept': 'application/json',
         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS,HEAD,PUT',
         'Access-Control-Allow-Headers': 'content-Type,x-requested-with'
