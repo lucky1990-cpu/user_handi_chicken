@@ -2,7 +2,7 @@ const ProdURL = 'http://user-handi-app.herokuapp.com';
 const DevUrl = 'http://localhost:3000';
 const URLGet =  DevUrl+'/SearchedByPhoneNo';
 const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
-const unOrderList =  document.querySelector('#ListMainDiv')
+const orderDetailsDiv =  document.querySelector('#ListMainDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
@@ -29,15 +29,18 @@ const SearchedPhoneCall = (mobNo)=>{
 }
 
 const FoodListBinding = (data)=>{
-  unOrderList.remove(unOrderList.childElementCount)
+  
   data.forEach(element => {
-
+    const unOrderList = document.createElement('ol')
+    unOrderList.className='list-group list-group-numbered';
+    orderDetailsDiv.appendChild(unOrderList)
     const list = document.createElement('li');
     list.className='list-group-item d-flex justify-content-between align-items-start';
     const listDiv = document.createElement('div');
     listDiv.className='ms-2 me-auto';
     list.appendChild(listDiv);
     unOrderList.appendChild(list)
+    
     const subHeadingDiv = document.createElement('div');
     subHeadingDiv.className='fw-bold';
     subHeadingDiv.innerHTML=element.FoodName;
