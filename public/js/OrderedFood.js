@@ -29,8 +29,9 @@ const SearchedPhoneCall = (mobNo)=>{
 }
 
 const FoodListBinding = (data)=>{
+  orderDetailsDiv.innerText='';
   data.forEach(element => {
-    const unOrderList = document.createElement('ol')
+    const unOrderList = document.createElement('ul')
     unOrderList.className='list-group list-group-numbered';
     orderDetailsDiv.appendChild(unOrderList)
     const list = document.createElement('li');
