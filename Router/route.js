@@ -88,7 +88,8 @@ route.post('/FoodOrder',async(req,res)=>{
     try{
       foodUserOrder.save();
       
-      res.status(200).json({data:'order is submited succesfully'})
+      res.status(200).json({message:'Order is submited succesfully !',
+                            userName:req.body.Name})
       
      }
      catch(e){

@@ -116,8 +116,8 @@ $.ajax({
    contentType: "application/json; charset=utf-8",
    data: EditData,
     success: function(data){
-     
       document.querySelector('.orderAlert').style.visibility='visible';
+      document.querySelector('#UpdateFood').style.visibility='hidden';
       document.querySelector('#conMessage').innerText=data.data;
     },
     error:function(e){
