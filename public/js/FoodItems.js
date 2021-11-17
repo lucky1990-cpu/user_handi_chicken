@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    const ProdUrl = 'http://handi-chichen.herokuapp.com/FoodItems';
+    const ProdUrl = 'http://user-handi-app.herokuapp.com/FoodItems';
     const DevUrl = 'http://localhost:3000/FoodItems';
     $.ajax({
         type: "GET",
