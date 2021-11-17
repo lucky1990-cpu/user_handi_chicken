@@ -35,7 +35,7 @@ const FoodListBinding = (data)=>{
     unOrderList.style='list-style-type:none';
     orderDetailsDiv.appendChild(unOrderList)
     const list = document.createElement('li');
-    list.className='list-group-item d-flex justify-content-between align-items-start';
+    list.className='list-group-item d-flex justify-content-between align-items-start OrderedItemShadow';
     const listDiv = document.createElement('div');
     listDiv.className='ms-2 me-auto';
     list.appendChild(listDiv);
