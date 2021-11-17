@@ -116,7 +116,9 @@ $.ajax({
    contentType: "application/json; charset=utf-8",
    data: EditData,
     success: function(data){
-      alert(data.data)
+     
+      document.querySelector('.orderAlert').style.visibility='visible';
+      document.querySelector('#conMessage').innerText=data.data;
     },
     error:function(e){
       console.log(e)
