@@ -90,9 +90,12 @@ const FoodListBinding = (data)=>{
   });
 
  
-  $('#EditBackButton').click(()=>{
-    window.location.href='/AllFoodItems' 
- })
+ 
+
+ document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
+  e.preventDefault();
+  window.location.href='/AllFoodItems' 
+})
 
 
 
