@@ -2,6 +2,17 @@ $(document).ready(function(){
     
     const ProdUrl = 'http://handi-chichen.herokuapp.com/FoodItems';
     const DevUrl = 'http://localhost:3000/FoodItems';
+
+    $.getJSON(ProdUrl, function (data) {
+     
+           var response=JSON.stringify(data);
+            alert("success="+response);
+            
+        });
+
+
+
+
     $.ajax({
         type: "GET",
         url: ProdUrl,
