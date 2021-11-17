@@ -1,0 +1,21 @@
+{
+  "name": "userapphandi",
+  "version": "1.0.0",
+  "description": "user application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon index.js"
+  },
+  "author": "lucky",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.6",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "mongoose": "^6.0.13",
+    "node-env-file": "^0.1.8",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,92 @@
+.HomePageLogin{
+    margin-top: 53%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    width: 90%;
+    margin-left: 4%;
+    background: #f9fafbc4;
+ 
+
+}
+
+.HomeBackGround{
+    background-image: url('/Img/Restaurant.jpg');
+    
+    background-position: center;
+    
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #CardContainer{
+    padding: 18%;
+    margin-top: -19%;
+}
+
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#HeaderImg{
+  height: 40%;
+  padding: 3%;
+  border: 1px solid black;
+  margin-top: 4%;
+}
+
+.FoodItemsMainten{
+  margin-top: 4%;
+  padding: 5%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  width: 90%;
+  margin-left: 4%;
+}
+.divCenter{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.MobSearch{
+  padding: 7%;
+}
+.QtyAmount{
+  padding-right: 23%;
+}
+#ListMainDiv{
+  padding:6px;
+  font-family: emoji;
+}
