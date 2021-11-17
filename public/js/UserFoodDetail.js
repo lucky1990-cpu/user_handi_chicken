@@ -135,3 +135,7 @@ $.ajax({
    document.querySelector('#totalAmount').innerHTML= 'Rs.'+ totalAmount;
 
  }
+
+ const onOrderedPage = ()=>{
+  window.location.href='/OrderedFood'
+ }
