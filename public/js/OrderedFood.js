@@ -2,7 +2,7 @@ const ProdURL = 'http://user-handi-app.herokuapp.com';
 const DevUrl = 'http://localhost:3000';
 const URLGet =  DevUrl+'/SearchedByPhoneNo';
 const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
-const orderDetailsDiv =  document.querySelector('#ListMainDiv')
+const orderDetailsDiv =  document.querySelector('#orderDetailsDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
