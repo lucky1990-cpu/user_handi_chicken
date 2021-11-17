@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const PublicDirectoryPath = path.join(__dirname,'./public')
 app.set("view engine", "hbs");
@@ -10,7 +11,7 @@ require('./MongoDB/MongooseConnection')
 
 app.use('/',require('./Router/route'));
 
-
+app.use(cors())
 const Port = process.env.PORT || 3000
 
 app.listen(Port,(req,res)=>{

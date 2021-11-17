@@ -1,10 +1,13 @@
 const route = require('express').Router()
 const fs = require('fs');
+
 const { Router } = require('express')
 // const control =  require('../controller/control')
 // const upload = require('../Middleware/multer')
 const UserOrderDetails  = require('../MongoDB/UserOrderDetails')
 const FoodDetails = require('../MongoDB/FoodDetail')
+
+
 
 route.get('/',(req,res)=>{
     res.render('home')
