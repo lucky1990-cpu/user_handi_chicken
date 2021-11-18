@@ -88,23 +88,23 @@ route.get('/UserOrderedFood',async(req,res)=>{
 })
 
 route.post('/OrderStatus',async(req,res)=>{
-    // const updatedStatusId =  {_id:req.query.StatusFoodId}
-    // const updateStatusValue = {$set:{
-    //     Status: req.query.FoodStatus
+    const updatedStatusId =  {_id:req.body.StatusFoodId}
+    const updateStatusValue = {$set:{
+        Status: req.body.FoodStatus
      
-    // }}
-    // try{
-    //    const UpdateStatus=  await userFood.UserOrderDetails(updatedStatusId, updateStatusValue)
-    //    res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
-    //    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
-    //    res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-    //     res.json({data:'succssfullly updated',userData:UpdateStatus})
-    //    }
-    //    catch(e){
-    //      console.log(e)
-    //    }
+    }}
+    try{
+       const UpdateStatus=  await UserOrderDetails(updatedStatusId, updateStatusValue)
+       res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+       res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+       res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json({data:'succssfullly updated',userData:UpdateStatus})
+       }
+       catch(e){
+         console.log(e)
+       }
      
-    res.send('reading data')
+    
     
 
 })
