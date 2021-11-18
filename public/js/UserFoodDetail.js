@@ -108,6 +108,7 @@ $.ajax({
  }
 
  function UpdateFoodItem(updatedFood){
+  updatedFood.Status='P';
    const EditData = JSON.stringify(updatedFood)
   $.ajax({
     type: "POST",
