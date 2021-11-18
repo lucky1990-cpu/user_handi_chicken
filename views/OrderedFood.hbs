@@ -26,15 +26,27 @@
         Please continuously press search or Refresh button to check your food status
       </div>
     </div>
-      <div class="container MobSearch">   
+      {{!-- <div class="container MobSearch">   
   <div class="mb-3">
     <label for="PhoneNumber" class="form-label">Mobile Number</label>
     <input type="number" placeholder="Please Enter Mobile No." class="form-control" id="PhoneNumber" aria-describedby="phoneHelper">
     <div id="PhoneHelper" class="form-text">Please Enter Mobile No which you placed Order.</div>
   </div>
-  <button type="button" id="searchByPhone" class="btn btn-primary">Search</button>
+  <button type="button"  class="btn btn-primary">Search</button>
       
-    </div>
+    </div> --}}
+
+    {{!-- Search logic --}}
+
+     <form class="d-flex">
+      <input id="PhoneNumber"  class="form-control me-2" type="number" placeholder="Please Enter Mobile No." aria-label="Search" aria-describedby="phoneHelper">
+      
+      <button class="btn btn-outline-success" id="searchByPhone" type="submit">Search</button>
+      <div id="PhoneHelper" class="form-text">Please Enter Mobile No which you placed Order.</div>
+    </form>
+
+
+
    <div id ='orderDetailsDiv'></div>
     {{!-- <ol class="list-group list-group-numbered" id='ListMainDiv'> --}}
   {{!-- <li class="list-group-item d-flex justify-content-between align-items-start">
