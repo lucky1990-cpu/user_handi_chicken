@@ -88,8 +88,6 @@ route.get('/UserOrderedFood',async(req,res)=>{
 })
 
 route.get('/OrderStatus',async(req,res)=>{
-   
-    
     const updatedStatusId =  {_id:req.query.StatusFoodId}
     const updateStatusValue = {$set:{
         Status: req.query.FoodStatus
@@ -100,7 +98,7 @@ route.get('/OrderStatus',async(req,res)=>{
        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-        res.status(200).json({data:'succssfullly updated'})
+        res.json({data:'succssfullly updated'})
        }
        catch(e){
          console.log(e)
