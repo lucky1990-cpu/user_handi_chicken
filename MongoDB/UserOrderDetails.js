@@ -21,7 +21,10 @@ const mongoose =  require('mongoose')
      },
      FoodId:{
          type:String
-     }
+     },
+     Status:{
+        type:String
+    }
  })
 
  module.exports= FoodItemsModel

@@ -71,6 +71,42 @@ res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
 
 })
 
+route.get('/UserOrderedFood',async(req,res)=>{
+    try{
+        const userFoodDetails = await UserOrderDetails.find({})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json(userFoodDetails)
+        console.log(userFoodDetails)
+
+    }catch(e){
+        res.json(e)
+    }
+
+})
+
+route.post('/OrderStatus',async(req,res)=>{
+    console.log(req.body)
+    const updatedStatusId =  {_id:req.body.StatusFoodId}
+    const updateStatusValue = {$set:{
+        Status: req.body.FoodStatus
+     
+    }}
+    try{
+       const UpdateStatus=  await userFood.UserOrderDetails(updatedStatusId, updateStatusValue)
+       res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+       res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+       res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.status(200).json({data:'succssfullly updated'})
+       }
+       catch(e){
+         console.log(e)
+       }
+
+    
+
+})
 route.post('/FoodOrder',async(req,res)=>{
     console.log(req.body)
      const FoodOrderDetail = {

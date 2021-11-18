@@ -3,6 +3,25 @@ $(document).ready(function(){
     const ProdUrl = 'http://handi-chichen.herokuapp.com/FoodItems';
     const DevUrl = 'http://localhost:3000/FoodItems';
 
+    // $.ajax({
+    //     type: "GET",
+    //     url: ProdUrl,
+    //     async: true,
+    //     crossDomain: true,
+    //     headers: {  'Access-Control-Allow-Origin': '*',
+    //     'accept': 'application/json'
+      
+    //  },
+
+  
+    //     success: function(data){
+    //     //   document.querySelector('.loader').style.visibility='hidden';
+    //     //   FoodListBinding(data);
+    //        console.log(data)
+    //     }
+    //   });
+
+
     $.getJSON(ProdUrl,(result)=>{
         document.querySelector('.loader').style.visibility='hidden';
         var maindiv = document.getElementById('CardContainer');
