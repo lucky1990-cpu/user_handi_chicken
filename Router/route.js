@@ -116,7 +116,8 @@ route.post('/FoodOrder',async(req,res)=>{
         TotalAmount:req.body.TotalAmount,
         Name:req.body.Name,
         PhoneNo:req.body.PhoneNo,
-        Address:req.body.Address
+        Address:req.body.Address,
+        Status:req.body.Status
      }
     // console.log('update food items:'+ req.url)
     // console.log(req.body)
