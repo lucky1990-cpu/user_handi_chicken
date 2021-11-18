@@ -83,8 +83,20 @@ const FoodListBinding = (data)=>{
     status.innerHTML='Status'
     StatusPendingDiv.appendChild(status)
     const pending = document.createElement('div');
-    pending.className='badge bg-primary rounded-pill';
-    pending.innerHTML='pending'
+    pending.className='badge  rounded-pill';
+    if(element.Status=='P'){
+      pending.innerHTML='pending'
+      pending.className='bg-primary'
+    }
+    if(element.Status=='R'){
+      pending.innerHTML='recived'
+      pending.style.backgroundColor='green';
+    }
+    if(element.Status=='C'){
+      pending.innerHTML='completed' 
+      pending.style.backgroundColor='gray'
+    }
+    
     StatusPendingDiv.appendChild(pending)
   
     list.appendChild(StatusPendingDiv)
