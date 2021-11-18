@@ -9,6 +9,8 @@ app.use(express.static(PublicDirectoryPath))
 app.use(express.json()) 
 require('./MongoDB/MongooseConnection')
 app.use(cors())
+
+app.options('*',cors()) //for all routes(include before other routes)
 app.use('/',require('./Router/route'));
 
 
