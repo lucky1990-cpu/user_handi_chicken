@@ -8,10 +8,10 @@ app.set('views', path.join(__dirname, './views'));
 app.use(express.static(PublicDirectoryPath))
 app.use(express.json()) 
 require('./MongoDB/MongooseConnection')
-
+app.use(cors())
 app.use('/',require('./Router/route'));
 
-app.use(cors())
+
 const Port = process.env.PORT || 3000
 
 app.listen(Port,(req,res)=>{
