@@ -87,7 +87,7 @@ route.get('/UserOrderedFood',async(req,res)=>{
 
 })
 
-route.get('/OrderStatus',async(req,res)=>{
+route.post('/OrderStatus',async(req,res)=>{
     // const updatedStatusId =  {_id:req.query.StatusFoodId}
     // const updateStatusValue = {$set:{
     //     Status: req.query.FoodStatus
