@@ -87,14 +87,12 @@ route.get('/UserOrderedFood',async(req,res)=>{
 
 })
 
-route.post('/OrderStatus',async(req,res)=>{
-    res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
-    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-    console.log(req.body)
-    const updatedStatusId =  {_id:req.body.StatusFoodId}
+route.get('/OrderStatus',async(req,res)=>{
+   
+    
+    const updatedStatusId =  {_id:req.query.StatusFoodId}
     const updateStatusValue = {$set:{
-        Status: req.body.FoodStatus
+        Status: req.query.FoodStatus
      
     }}
     try{
