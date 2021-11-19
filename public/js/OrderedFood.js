@@ -13,8 +13,25 @@ document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
   e.preventDefault();
   const mobNo = document.querySelector('#PhoneNumber').value;
+  if(mobNo==''){
+    document.querySelector('#PhoneNumber').style.border='2px solid red'
+    return;
+  }
+  document.querySelector('#PhoneNumber').style.border='2px solid black'
   SearchedPhoneCall(mobNo)
 })
+
+document.querySelector('#searchByRefresh').addEventListener('click',(e)=>{
+  e.preventDefault();
+  const mobNo = document.querySelector('#PhoneNumber').value;
+  if(mobNo==''){
+    document.querySelector('#PhoneNumber').style.border='2px solid red'
+    return;
+  }
+  document.querySelector('#PhoneNumber').style.border='2px solid black'
+  SearchedPhoneCall(mobNo)
+})
+
 
 const SearchedPhoneCall = (mobNo)=>{
   document.querySelector('.loader').style.visibility='visible';
