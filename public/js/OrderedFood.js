@@ -103,7 +103,7 @@ const FoodListBinding = (data)=>{
     pending.className='badge  rounded-pill';
     if(element.Status=='P'){
       pending.innerHTML='pending'
-      pending.className='bg-primary'
+      pending.style.backgroundColor='blue';
     }
     if(element.Status=='R'){
       pending.innerHTML='recived'
