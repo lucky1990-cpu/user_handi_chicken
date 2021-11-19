@@ -74,7 +74,7 @@ res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
 route.get('/UserOrderedFood',async(req,res)=>{
     
     try{
-        const userFoodDetails = await UserOrderDetails.find({})
+        const userFoodDetails = await UserOrderDetails.find({}).sort({'_id':-1})
         res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
