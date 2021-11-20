@@ -76,7 +76,8 @@ const FoodListBinding = (data)=>{
     userDetailDiv.appendChild(userPhone)
     
      const userDateTime = document.createElement('p')
-     userDateTime.innerHTML=element.DateTime;
+     const DateTime = new Date(element.DateTime)
+     userDateTime.innerHTML=DateTime
      userDetailDiv.appendChild(userDateTime)
 
     const userAddress= document.createElement('h6');
