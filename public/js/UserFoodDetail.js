@@ -112,6 +112,7 @@ $.ajax({
  function UpdateFoodItem(updatedFood){
   updatedFood.Status='P';
    const EditData = JSON.stringify(updatedFood)
+   document.querySelector('.loader').style.visibility='visible';
   $.ajax({
     type: "POST",
     url: URLProdFoodOrder,
@@ -119,6 +120,7 @@ $.ajax({
    contentType: "application/json; charset=utf-8",
    data: EditData,
     success: function(data){
+      document.querySelector('.loader').style.visibility='hidden';
       document.querySelector('.orderAlert').style.visibility='visible';
       document.querySelector('#UpdateFood').style.visibility='hidden';
       document.querySelector('#conMessage').innerText=data.message;
