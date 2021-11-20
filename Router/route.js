@@ -81,7 +81,12 @@ route.get('/SeachedByStatus',async(req,res)=>{
 route.get('/SearchByCurrentDate',async(req,res)=>{
     console.log(req.query)
     try{
-        const ordereFood = await UserOrderDetails.find({DateTime:{$gte:req.query.DateTime}})
+        const ordereFood = await UserOrderDetails.find({
+            "timestamp" : { 
+                $lt: new Date(), 
+                $gte: new Date(new Date().setDate(new Date().getDate()-1))
+              } 
+        })
         res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');

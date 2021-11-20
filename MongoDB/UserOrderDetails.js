@@ -27,7 +27,8 @@ const mongoose =  require('mongoose')
     },
     DateTime:{
         type:Date
-    }
- })
+    },
+    
+ },{timestamps: true})
 
  module.exports= FoodItemsModel
