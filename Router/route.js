@@ -59,6 +59,24 @@ route.get('/SearchedByPhoneNo',async(req,res)=>{
 })
 
 
+
+route.get('/SeachedByStatus',async(req,res)=>{
+    console.log(req.query)
+    try{
+        const ordereFood = await UserOrderDetails.find({Status:req.query.Status}).sort({'_id':-1})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json(ordereFood)
+    }
+   catch(e){
+       console.log(e)
+
+   }
+
+})
+
+
 route.get('/FoodItems',async(req,res)=>{
     try{
         const FoodItems = await FoodDetails.find({})
