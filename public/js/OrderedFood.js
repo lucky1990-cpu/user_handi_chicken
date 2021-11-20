@@ -119,14 +119,8 @@ const FoodListBinding = (data)=>{
       pending.innerHTML='completed' 
       pending.style.backgroundColor='gray'
     }
-    
     StatusPendingDiv.appendChild(pending)
-  
     list.appendChild(StatusPendingDiv)
-
-
-
-    
   });
 
 }
