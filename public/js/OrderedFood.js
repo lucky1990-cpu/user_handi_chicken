@@ -77,7 +77,7 @@ const FoodListBinding = (data)=>{
     
      const userDateTime = document.createElement('p')
      const DateTime = new Date(element.DateTime)
-     userDateTime.innerHTML=DateTime
+     userDateTime.innerHTML=DateTime.toLocaleString();
      userDetailDiv.appendChild(userDateTime)
 
     const userAddress= document.createElement('h6');
