@@ -29,6 +29,6 @@ const mongoose =  require('mongoose')
         type:Date
     },
     
- },{timestamps: true})
+ })
 
  module.exports= FoodItemsModel
