@@ -86,7 +86,7 @@ route.get('/SearchByCurrentDate',async(req,res)=>{
                 $lt: new Date(), 
                 $gte: new Date(new Date().setDate(new Date().getDate()-1))
               } 
-        })
+        }).sort({'_id':-1})
         res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
