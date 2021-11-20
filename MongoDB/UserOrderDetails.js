@@ -24,6 +24,9 @@ const mongoose =  require('mongoose')
      },
      Status:{
         type:String
+    },
+    DateTime:{
+        type:Date
     }
  })
 

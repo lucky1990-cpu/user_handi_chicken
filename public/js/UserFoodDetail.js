@@ -49,6 +49,7 @@ $.ajax({
   const Qty=document.getElementById('Qnty').value;
   const foodAmount = document.querySelector('#EditFoodAmount').innerHTML;
   const amount = Qty*foodAmount;
+  const dateTame =  new Date();
   const updatedFood = {
     FoodId:document.getElementById('EditFoodID').innerHTML,
     FoodName :document.getElementById('EditFoodName').innerHTML,
@@ -56,7 +57,8 @@ $.ajax({
     TotalAmount:amount,
     Name:document.querySelector('#UserName').value,
     PhoneNo:document.querySelector('#MobNo').value,
-    Address:document.querySelector('#homeAddress').value
+    Address:document.querySelector('#homeAddress').value,
+    DateTime:dateTame
 }
   userValidation(updatedFood)
    
