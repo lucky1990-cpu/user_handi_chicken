@@ -12,7 +12,7 @@ const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
 const myData = {
     _id:_id
 }
-
+document.querySelector('#UpdateFood').style.visibility='hidden';
 $.ajax({
     type: "GET",
     url: ProdURLGet,
@@ -25,6 +25,7 @@ $.ajax({
     },
     success: function(data){
       document.querySelector('.loader').style.visibility='hidden';
+      document.querySelector('#UpdateFood').style.visibility='visible';
        EditFormBinding(data)
     }
   });
