@@ -75,7 +75,6 @@ route.get('/SeachedByStatus',async(req,res)=>{
    }
 
 })
-
 route.get('/ShopPage',async(req,res)=>{
     res.render('ShopPage')
 
