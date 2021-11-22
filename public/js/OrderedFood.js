@@ -98,8 +98,7 @@ const FoodListBinding = (data)=>{
     amountSapn.innerHTML=element.TotalAmount
     QtyAmountDiv.appendChild(amountSapn)
     list.appendChild(QtyAmountDiv)
-  
-  
+
     const StatusPendingDiv = document.createElement('div');
     const status =  document.createElement('div');
     status.className='fw-bold'
