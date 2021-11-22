@@ -33,7 +33,7 @@ $.ajax({
   function EditFormBinding(data){
     document.getElementById('EditFoodID').innerHTML= data[0]._id;
     document.getElementById('EditFoodName').innerHTML= data[0].foodItem;
-    document.getElementById('EditFoodAmount').innerHTML= data[0].Amount;
+    document.getElementById('EditFoodAmount').innerHTML= 'Rs:'+data[0].Amount;
     document.querySelector('#totalAmount').innerHTML=data[0].Amount;
     const ImgVal = 'data:'+data[0].contentType+';base64,'+data[0].ImageBase64+'';
     document.getElementById('HeaderImg').src=ImgVal;
