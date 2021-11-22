@@ -76,6 +76,11 @@ route.get('/SeachedByStatus',async(req,res)=>{
 
 })
 
+route.get('/ShopPage',async(req,res)=>{
+    res.render('ShopPage')
+
+})
+
 
 
 route.get('/SearchByCurrentDate',async(req,res)=>{
