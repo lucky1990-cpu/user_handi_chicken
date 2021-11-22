@@ -80,6 +80,11 @@ route.get('/ShopPage',async(req,res)=>{
 
 })
 
+route.get('/BiryaniMahal',async(req,res)=>{
+    res.render('BiryaniMahal')
+
+})
+
 
 
 route.get('/SearchByCurrentDate',async(req,res)=>{
