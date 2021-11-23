@@ -95,7 +95,7 @@ const FoodListBinding = (data)=>{
     qty.appendChild(QtyData)
     QtyAmountDiv.appendChild(qty)
     const amountSapn = document.createElement('span')
-    amountSapn.innerHTML= 'Rs :' +element.TotalAmount
+    amountSapn.innerHTML= 'Rs:'+element.TotalAmount
     QtyAmountDiv.appendChild(amountSapn)
     list.appendChild(QtyAmountDiv)
 
