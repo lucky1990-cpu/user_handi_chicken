@@ -127,5 +127,5 @@ $.ajax({
  }
 
  const onOrderedPage = ()=>{
-  window.location.href='/OrderedFood'
+  window.location.href='/BiryaniMahalOrdrTracking'
  }

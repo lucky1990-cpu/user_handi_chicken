@@ -14,6 +14,9 @@ route.get('/',(req,res)=>{
     res.render('home')
 
 })
+route.get('/BiryaniMahalOrdrTracking',(req,res)=>{
+ res.render('BiryaniMahalOrdrTracking')
+})
 
 route.get('/AllFoodItems',(req,res)=>{
     res.render('AllFoodItems')
