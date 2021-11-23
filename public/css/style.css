@@ -84,14 +84,14 @@
  
 }
 .QtyAmount{
-  padding-right: 23%;
+  padding-right: 14%;
 }
 #ListMainDiv{
   padding:6px;
-  font-family: emoji;
+  font-family: "Times New Roman", Times, serif;
 }
 #orderDetailsDiv{
-  font-family: emoji;
+  font-family: "Times New Roman", Times, serif;
   padding-right: 6%;
   margin-top: 2%;
 }
@@ -115,7 +115,7 @@
 }
 .homeScreen{
   text-align: center;
-    font-family: emoji;
+    font-family: "Times New Roman", Times, serif;
 }
 .HomeCard{
   padding: 5%;
