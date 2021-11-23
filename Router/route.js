@@ -8,8 +8,6 @@ const UserOrderDetails  = require('../MongoDB/UserOrderDetails')
 const FoodDetails = require('../MongoDB/FoodDetail')
 const BiryaniMahalusersInfo = require('../MongoDB/BiryaniMahaiUserData')
 
-
-
 route.get('/',(req,res)=>{
     res.render('home')
 
