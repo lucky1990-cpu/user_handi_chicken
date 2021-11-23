@@ -84,6 +84,10 @@ route.get('/BiryaniMahal',async(req,res)=>{
     res.render('BiryaniMahal')
 
 })
+route.get('/UserDetailBiryaniMahal',async(req,res)=>{
+    res.render('UserDetailBiryaniMahal')
+
+})
 
 
 

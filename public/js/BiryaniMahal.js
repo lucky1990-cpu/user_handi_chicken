@@ -47,13 +47,13 @@ $(document).ready(function(){
               div2.innerHTML=element.foodItem;
               div1.appendChild(div2);
               const per = document.createElement('p');
-              const bold = document.createElement('b');
-              bold.innerHTML='RS:' +element.Amount
-              per.appendChild(bold)
+              // const bold = document.createElement('b');
+              per.innerHTML='RS:' +element.Amount
+              // per.appendChild(bold)
               div1.appendChild(per)
               const foodButton = document.createElement('a')
               foodButton.className='btn btn-primary EditBiryaniMahalFoodItem';
-              foodButton.innerHTML='Edit Food'
+              foodButton.innerHTML='Order Food'
               div1.appendChild(foodButton)
               const span = document.createElement('span');
               span.className='idVisiblity'
@@ -70,11 +70,11 @@ $(document).ready(function(){
             });
 
         }
-        $('.EditFood').click( ((e)=>{
+        $('.EditBiryaniMahalFoodItem').click( ((e)=>{
             const foodSibling = e.target.nextElementSibling;
             const foodId = foodSibling.getInnerHTML();
             localStorage.setItem("ID", foodId);
-            window.location.href='/OrderFoodItem';
+            window.location.href='/UserDetailBiryaniMahal';
             }))
        
     

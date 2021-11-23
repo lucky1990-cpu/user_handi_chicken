@@ -120,3 +120,6 @@
 .HomeCard{
   padding: 5%;
 }
+.idVisiblity{
+  visibility: hidden;
+}
