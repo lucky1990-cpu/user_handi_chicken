@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
     
-    const ProdUrl = 'https://handi-chichen.herokuapp.com/biryanimahalfooddetails';
+    const ProdUrl = 'https://handi-chichen.herokuapp.com/BiryaniMahalgetFood';
     const DevUrl = 'https://localhost:3000/FoodItems';
     const unOrderList = document.querySelector('#BiryaniMahalFoodContainer');
 
