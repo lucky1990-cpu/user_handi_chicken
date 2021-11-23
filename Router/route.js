@@ -6,6 +6,7 @@ const { Router } = require('express')
 // const upload = require('../Middleware/multer')
 const UserOrderDetails  = require('../MongoDB/UserOrderDetails')
 const FoodDetails = require('../MongoDB/FoodDetail')
+const BiryaniMahalusersInfo = require('../MongoDB/BiryaniMahaiUserData')
 
 
 
@@ -187,6 +188,37 @@ route.post('/FoodOrder',async(req,res)=>{
        const foodUserOrder=   await new UserOrderDetails(FoodOrderDetail)
     try{
       foodUserOrder.save();
+      
+      res.status(200).json({message:'Order is submited succesfully !',
+                            userName:req.body.Name})
+      
+     }
+     catch(e){
+       console.log(e)
+     }
+
+
+})
+
+route.post('/BiryaniMahalUsers',async(req,res)=>{
+    console.log(req.body)
+     const BiryaniFoodOrderDetail = {
+        FoodId: req.body.FoodId,
+        FoodName:req.body.FoodName,
+        Qty:req.body.Qty,
+        TotalAmount:req.body.TotalAmount,
+        Name:req.body.Name,
+        PhoneNo:req.body.PhoneNo,
+        Address:req.body.Address,
+        Status:req.body.Status,
+        DateTime:req.body.DateTime
+
+     }
+    // console.log('update food items:'+ req.url)
+    // console.log(req.body)
+       const BiryaniMahlData=   await new BiryaniMahalusersInfo(BiryaniFoodOrderDetail)
+    try{
+        BiryaniMahlData.save();
       
       res.status(200).json({message:'Order is submited succesfully !',
                             userName:req.body.Name})

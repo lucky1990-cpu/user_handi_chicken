@@ -5,7 +5,7 @@ const DevUrl = 'https://localhost:3000';
 const ProdUrl = 'https://handi-chichen.herokuapp.com';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const URLFoodOrder = DevUrl+'/FoodOrder';
-const URLProdFoodOrder = ProdUserURL +'/BiryaniMahalgetFood';
+const URLProdFoodOrder = ProdUserURL +'/BiryaniMahalUsers';
 const ProdURLGet = ProdUrl+'/BiryaniMahalgetFood';
 const URLEditFood = ProdUrl +'/UpdateFoodItem';
 const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
@@ -92,23 +92,7 @@ $.ajax({
  }
 
 
- function DeleteRecord(deleteId){
-   const delData =  JSON.stringify(deleteId);
-  $.ajax({
-    type: "POST",
-    url: URLDeleteFood,
-    dataType: "json",
-   contentType: "application/json; charset=utf-8",
-   data: delData,
-    success: function(data){
-      alert(data.data)
-      window.location.href='/'
-    },
-    error:function(e){
-      console.log(e)
-    }
-  });
- }
+
 
  function UpdateFoodItem(updatedFood){
   updatedFood.Status='P';
