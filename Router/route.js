@@ -13,7 +13,7 @@ route.get('/',(req,res)=>{
 
 })
 route.get('/BiryaniMahalOrdrTracking',(req,res)=>{
- res.render('BiryaniMahalOrdrTracking')
+ res.render('BiryaniMahalOrderTracking')
 })
 route.get('/AllFoodItems',(req,res)=>{
     res.render('AllFoodItems')
