@@ -95,6 +95,22 @@ route.get('/SeachedByStatus',async(req,res)=>{
    }
 
 })
+
+route.get('/BiryaniMahalSeachedByStatus',async(req,res)=>{
+    console.log(req.query)
+    try{
+        const BiryaniMahalordereFoodStatus = await BiryaniMahalusersInfo.find({Status:req.query.Status}).sort({'_id':-1})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json(BiryaniMahalordereFoodStatus)
+    }
+   catch(e){
+       console.log(e)
+
+   }
+
+})
 route.get('/ShopPage',async(req,res)=>{
     res.render('ShopPage')
 
@@ -124,6 +140,28 @@ route.get('/SearchByCurrentDate',async(req,res)=>{
         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
         res.json(ordereFood)
+    }
+   catch(e){
+       console.log(e)
+
+   }
+
+})
+
+
+route.get('/BiryaniMahalSearchByCurrentDate',async(req,res)=>{
+    console.log(req.query)
+    try{
+        const BiryaniMahalordereFood = await BiryaniMahalusersInfo.find({
+            DateTime : { 
+                $lt: new Date(), 
+                $gte: new Date(new Date().setDate(new Date().getDate()-1))
+              } 
+        }).sort({'_id':-1})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json(BiryaniMahalordereFood)
     }
    catch(e){
        console.log(e)
@@ -167,6 +205,23 @@ route.get('/UserOrderedFood',async(req,res)=>{
 
 })
 
+
+route.get('/BiryaniMahalUserOrderedFood',async(req,res)=>{
+    
+    try{
+        const BiryaniMahalUserFoodDetails = await BiryaniMahalusersInfo.find({}).sort({'_id':-1})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json(BiryaniMahalUserFoodDetails)
+        
+
+    }catch(e){
+        res.json(e)
+    }
+
+})
+
 route.post('/OrderStatus',async(req,res)=>{
     const updatedStatusId =  {_id:req.body.StatusFoodId}
     const updateStatusValue = {$set:{
@@ -183,10 +238,24 @@ route.post('/OrderStatus',async(req,res)=>{
        catch(e){
          console.log(e)
        }
-     
-    
-    
+})
 
+route.post('/BiryaniMahalOrderStatus',async(req,res)=>{
+    const BiryaniMahalupdatedStatusId =  {_id:req.body.StatusFoodId}
+    const BiryaniMahalupdateStatusValue = {$set:{
+        Status: req.body.FoodStatus
+     
+    }}
+    try{
+       const BiryaniMahalUpdateStatus=  await BiryaniMahalusersInfo.findByIdAndUpdate(BiryaniMahalupdatedStatusId, BiryaniMahalupdateStatusValue)
+       res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+       res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+       res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+        res.json({data:'succssfullly updated',userData:BiryaniMahalUpdateStatus})
+       }
+       catch(e){
+         console.log(e)
+       }
 })
 route.post('/FoodOrder',async(req,res)=>{
     console.log(req.body)
@@ -218,6 +287,8 @@ route.post('/FoodOrder',async(req,res)=>{
 
 
 })
+
+
 
 route.post('/BiryaniMahalUsers',async(req,res)=>{
     console.log(req.body)
