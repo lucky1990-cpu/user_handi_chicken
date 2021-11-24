@@ -34,7 +34,7 @@ $(document).ready(function(){
           foodButton.innerHTML='Order Food'
           div1.appendChild(foodButton)
           const span = document.createElement('span');
-          // span.className='idVisiblity'
+          span.className='idVisiblity'
           span.innerHTML=element._id;
           div1.appendChild(span);
           listItem.appendChild(div1);
