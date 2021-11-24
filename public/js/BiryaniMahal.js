@@ -7,6 +7,11 @@ $(document).ready(function(){
     });
   });
 
+  document.querySelector('#OnNavBackButton').addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location.href='/ShopPage' 
+  })
+
 
 
     

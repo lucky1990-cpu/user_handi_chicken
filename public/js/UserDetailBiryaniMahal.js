@@ -42,7 +42,7 @@ $.ajax({
   }
 
   $('#EditBackButton').click(()=>{
-    window.location.href='/AllFoodItems' 
+    window.location.href='/BiryaniMahal' 
  })
   
  document.querySelector('#UpdateFood').addEventListener('click',(e)=>{
