@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 
  const  OrderedFood =(()=>{
-    window.location.href='/OrderedFood'
+    window.location.href='/BiryaniMahalOrdrTracking'
  })
 
  
