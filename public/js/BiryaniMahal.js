@@ -19,25 +19,6 @@ $(document).ready(function(){
     
     const unOrderList = document.querySelector('#BiryaniMahalFoodContainer');
 
-    // $.ajax({
-    //     type: "GET",
-    //     url: ProdUrl,
-    //     async: true,
-    //     crossDomain: true,
-    //     headers: {  'Access-Control-Allow-Origin': '*',
-    //     'accept': 'application/json'
-      
-    //  },
-
-  
-    //     success: function(data){
-    //     //   document.querySelector('.loader').style.visibility='hidden';
-    //     //   FoodListBinding(data);
-    //        console.log(data)
-    //     }
-    //   });
-
-
     $.getJSON(ProdUrl,(result)=>{
         document.querySelector('.loader').style.visibility='hidden';
         // var maindiv = document.getElementById('CardContainer');
@@ -53,7 +34,7 @@ $(document).ready(function(){
               div1.appendChild(div2);
               const per = document.createElement('p');
               // const bold = document.createElement('b');
-              per.innerHTML='RS:' +element.Amount
+              per.innerHTML='Rs:'+element.Amount
               // per.appendChild(bold)
               div1.appendChild(per)
               const foodButton = document.createElement('a')
