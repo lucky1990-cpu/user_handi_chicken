@@ -1,27 +1,13 @@
+document.querySelector('#BackButton').addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location.href='/ShopPage' 
+  })
+
+  const ProdUrl = 'https://handi-chichen.herokuapp.com/FoodItems';
+  const DevUrl = 'https://localhost:3000/FoodItems';
+
+
 $(document).ready(function(){
-    
-    const ProdUrl = 'https://handi-chichen.herokuapp.com/FoodItems';
-    const DevUrl = 'https://localhost:3000/FoodItems';
-
-    // $.ajax({
-    //     type: "GET",
-    //     url: ProdUrl,
-    //     async: true,
-    //     crossDomain: true,
-    //     headers: {  'Access-Control-Allow-Origin': '*',
-    //     'accept': 'application/json'
-      
-    //  },
-
-  
-    //     success: function(data){
-    //     //   document.querySelector('.loader').style.visibility='hidden';
-    //     //   FoodListBinding(data);
-    //        console.log(data)
-    //     }
-    //   });
-
-
     $.getJSON(ProdUrl,(result)=>{
         document.querySelector('.loader').style.visibility='hidden';
         var maindiv = document.getElementById('CardContainer');
